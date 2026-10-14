@@ -87,11 +87,10 @@ red_bgr = np.clip(red_bgr.astype(np.float32) * 0.92, 0, 255).astype(np.uint8)
 hero = Image.fromarray(cv2.cvtColor(red_bgr, cv2.COLOR_BGR2RGB))
 save(hero, "hero.jpg", 78)
 save(hero.resize((1100, round(hero.height * 1100 / hero.width)), Image.LANCZOS), "hero-md.jpg", 76)
-# Phone crop: portrait, centred on the big speaker.
-hw, hhgt = hero.size
-pw = int(hhgt * 0.78)
-x0 = int(hw * 0.02)
-save(hero.crop((x0, 0, x0 + pw, hhgt)).resize((720, round(hhgt * 720 / pw)), Image.LANCZOS), "hero-sm.jpg", 76)
+# Phone crop: nearly square and at native resolution (no upscaling), wide enough to
+# show the whole front speaker. On phones it sits in a band at the top of the hero.
+hhgt = hero.height
+save(hero.crop((40, 0, 1010, hhgt)), "hero-sm.jpg", 80)
 print("hero", hero.size)
 
 # ---------- Product photos ----------

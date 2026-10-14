@@ -227,6 +227,17 @@ p { margin: 0; }
       linear-gradient(0deg, var(--bg) 0%, rgba(14, 13, 16, 0) 22%);
   }
 }
+/* Phones: the wallpaper sits in a band at the top at its own scale instead of being
+   blown up to the full screen height, then fades into the page behind the headline. */
+@media (max-width: 700px) {
+  .hero-media { inset: 0 0 auto 0; height: min(64svh, 122vw); }
+  .hero-media img { object-position: 42% 50%; }
+  .hero-media::after { content: ""; position: absolute; inset: auto 0 0 0; height: 46%; background: linear-gradient(0deg, var(--bg) 0%, rgba(14, 13, 16, 0.7) 45%, rgba(14, 13, 16, 0) 100%); }
+  .hero::before { background: linear-gradient(180deg, rgba(14, 13, 16, 0.6) 0%, rgba(14, 13, 16, 0) 16%); }
+  .hero-ctas { flex-wrap: nowrap; gap: 12px; }
+  .hero-ctas .btn { padding: 0 18px; flex: 1 1 auto; }
+}
+@media (max-width: 359px) { .hero-ctas { flex-wrap: wrap; } }
 .hero-inner { padding-top: calc(var(--header-h) + 24px); padding-bottom: 56px; }
 @media (min-width: 701px) { .hero-inner { padding-top: var(--header-h); padding-bottom: 40px; } }
 .hero-title {
