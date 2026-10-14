@@ -49,7 +49,7 @@ window.PRODUCTS = [
   {
     id: "expo-amp-4ch", name: "Targa or Bass Station 4-channel amplifier", cat: "amps", price: 1500, unit: "each",
     img: "assets/img/products/amp-4ch.webp", flyer: "targa-bass-amps", special: true,
-    options: ["Targa TO-H26500.4", "Bass Station 4.2000X"],
+    options: ["Targa TO-H26500.4", "Bassmasters Bass-Station 4.200DX"],
     desc: "Four-channel power amplifiers from Targa and Bass Station at a special expo price. Pick your model."
   },
   {

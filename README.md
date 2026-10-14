@@ -21,6 +21,7 @@ All products live in `assets/js/products.js`: name, category, price (or `null` f
 - Logo: lifted off the shop sign in the storefront photo (`tools/extract-logo.py`), with SOUND tinted brand red. Favicon: slanted R badge like the one on the "Feel every beat" flyer.
 - Real products and prices from Rico's flyers: Pride TS-1820HD 18" sub (R1 150), Audiobahn AS96V 6x9 (R650 a set), Nakamichi 9" player (R3 500), Targa / Bass Station amps (R1 500 each), Land Cruiser mud flaps (R3 500 a set), TTX LC70 body kit (R59 999 incl. VAT, special until end October 2026), plus air suspension, TTX floor mats and the nudge bar with spotlights (no price on the flyers, so they are "Quote" items).
 - Address, second number and Instagram from the MLcustomsRicossound Facebook page.
+- Brand logo strip (`assets/img/brands/`, built by `tools/make-brand-logos.py`, all shown in white): Kicker, Nakamichi, Hertz and Targa from Brandfetch and the brands' own sites; Audiobahn, Pride and TTX lifted from Rico's flyers; T1 Audio from the sign beside the shop. Bass Station (Bassmasters) is left out because no clean logo was available, only a combined Bass/Targa expo emblem.
 - Product photos are generated photoreal studio shots (Figma AI) in one consistent style. The LC70 card and the installs photos are cropped from the client's flyers; the air suspension photo is the client's own workshop job.
 - **Sample products** (marked SAMPLE in `products.js`): 12" sub in ported box, component speakers, mono block, single-DIN radio, wiring kit, capacitor, gauges, LED spotlights, light bar, LED bulbs, 17" mags, all-terrain tyre, sports muffler.
 
@@ -31,6 +32,7 @@ All products live in `assets/js/products.js`: name, category, price (or `null` f
 - Which number should receive WhatsApp orders (set to 082 638 0403, the number on most flyers; 064 908 5759 is listed for customs and installs).
 - Payment methods, deposits for body kits, courier areas and fees.
 - Legal status and VAT number for the ECTA disclosure in `terms.html`.
+- Which brands Rico stocks for the logo strip (taken from the shop window and flyers), and a Bass Station logo if they have one
 - Street name spelling ("Operman Street" as listed on Facebook).
 - No reviews or testimonials are on the site. Add real ones if the client supplies them.
 
@@ -38,6 +40,7 @@ All products live in `assets/js/products.js`: name, category, price (or `null` f
 
 - `tools/extract-logo.py`: lifts the logo off the storefront sign into `research/logo-alpha.png`
 - `tools/make-assets.py`: builds the logo, favicons, recoloured hero, product, flyer and work photos and the brush stroke from the client's files (local only, not committed) and `research/`
+- `tools/make-brand-logos.py`: builds the white brand logos for the marquee from `research/logos` and the client's files
 - `tools/make-pages.py`: writes the legal pages and 404 from one template
 - `tools/og.html` + `tools/make-og.sh`: renders `og-image.jpg` with headless Chrome
 
