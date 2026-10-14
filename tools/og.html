@@ -1,0 +1,28 @@
+<!doctype html>
+<html><head><meta charset="utf-8">
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@1,800&family=Barlow:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  html, body { margin: 0; width: 1200px; height: 630px; overflow: hidden; background: #0e0d10; }
+  .og { position: relative; width: 1200px; height: 630px; overflow: hidden; color: #f4f1ee; font-family: Barlow, sans-serif; }
+  .bg { position: absolute; inset: 0; background: url("../assets/img/hero.webp") 70% 50% / cover; }
+  .og::before { content: ""; position: absolute; inset: 0; z-index: 1;
+    background: linear-gradient(90deg, rgba(14,13,16,.96) 0%, rgba(14,13,16,.85) 40%, rgba(14,13,16,.15) 72%, rgba(14,13,16,0) 100%); }
+  .in { position: absolute; z-index: 2; left: 64px; top: 56px; bottom: 56px; display: flex; flex-direction: column; }
+  .logo { width: 330px; }
+  h1 { margin: 34px 0 0; font: italic 800 132px/.86 "Barlow Condensed"; text-transform: uppercase; }
+  .brushed { position: relative; display: inline-block; padding: 0 .2em 0 .1em; margin-left: -.08em; z-index: 0; }
+  .brushed::before { content: ""; position: absolute; inset: .02em -.08em -.04em -.14em; z-index: -1; background: url("../assets/img/brush.webp") center / 100% 100% no-repeat; }
+  p { margin: 26px 0 0; font-size: 30px; font-weight: 500; color: rgba(244,241,238,.88); }
+  .wa { margin-top: auto; display: inline-flex; align-items: center; gap: 14px; font: italic 800 40px/1 "Barlow Condensed"; letter-spacing: .02em; }
+  .wa span { background: #e1192b; padding: 12px 22px; transform: skewX(-12deg); border-radius: 4px; }
+  .wa span b { display: inline-block; transform: skewX(12deg); font-weight: 800; }
+</style></head>
+<body><div class="og">
+  <div class="bg"></div>
+  <div class="in">
+    <img class="logo" src="../assets/img/logo@2x.webp" alt="">
+    <h1>Feel every<br><span class="brushed">beat.</span></h1>
+    <p>Car audio, 4x4 accessories and installs in Witbank</p>
+    <div class="wa"><span><b>Order on WhatsApp 082 638 0403</b></span></div>
+  </div>
+</div></body></html>

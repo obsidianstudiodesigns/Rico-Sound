@@ -1,0 +1,7 @@
+# Client source files and working material stay local
+*.jpeg
+landing page.png
+research/
+.claude/
+og-render.png
+Thumbs.db
